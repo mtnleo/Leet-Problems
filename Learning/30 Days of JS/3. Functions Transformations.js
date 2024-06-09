@@ -15,5 +15,17 @@ var argumentsLength = function(...args) {
 };
 
 // 2666. Allow one Function Call
+var once = function(fn) {
+    let called;
+    return function(...args){
+        if(called === undefined) {
+            called = true;
+            return fn(...args);
+        }
+        else {
+            return undefined;
+        }
+    }
+};
 
 // 2623. Memoize
