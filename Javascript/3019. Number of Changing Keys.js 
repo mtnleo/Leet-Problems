@@ -1,0 +1,10 @@
+var countKeyChanges = function(s) {
+    let counter = 0;
+    sLength = s.length;
+    for (let i = 0; i < sLength; i++) {
+        if(i < sLength - 1 && s[i].toLowerCase() !== s[i+1].toLowerCase()) {
+            counter++;
+        }
+    }
+    return counter;
+};
